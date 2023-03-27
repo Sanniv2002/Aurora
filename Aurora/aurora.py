@@ -118,7 +118,7 @@ def progress_bar(progress, total, error, accuracy):
 
 
 # Training
-def train(network, loss, loss_prime, X, Y, epochs, learning_rate):
+def train(network, loss, loss_prime, X, Y, batch_size, epochs, learning_rate):
     for e in range(epochs):
         error = 0
         nr_correct = 0
@@ -135,7 +135,7 @@ def train(network, loss, loss_prime, X, Y, epochs, learning_rate):
             for layer in reversed(network):
                 grad = layer.backward(grad, learning_rate)
         error /= len(X)
-        accuracy = round((nr_correct / Y.shape[0]) * 100, 2)
+        accuracy = round((nr_correct / batch_size) * 100, 3)
         progress_bar(e+1, epochs, error, accuracy)
 
 
