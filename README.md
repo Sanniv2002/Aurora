@@ -10,7 +10,7 @@ This repository contains a compact implementation of an Artificial Neural Networ
 
 ## Usage
 
-1. Import the `ann.py` file into your project.
+1. Import the `aurora.py` file into your project.
 2. Define your neural network architecture by creating layers and activations.
 3. Create a network by combining layers and activations as needed.
 4. Use the `train()` function to train your network on your data.
